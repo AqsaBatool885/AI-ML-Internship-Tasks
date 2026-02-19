@@ -1,36 +1,33 @@
-# AI/ML Engineering Internship - DevelopersHub Corporation
+Task 1: Iris Dataset Exploration & Visualization
+Problem Statement
+The goal of this task was to perform Exploratory Data Analysis (EDA) on the classic Iris dataset to identify patterns that distinguish different flower species.
 
-## Task 1: Exploring and Visualizing a Simple Dataset
+Technical Workflow
+Data Cleaning: Inspected for missing values and confirmed data integrity.
 
-### Objective
-The goal of this task was to build a foundation in data exploration by loading, inspecting, and visualizing a real-world dataset to understand trends and distributions.
+Analysis: Used .describe() for statistical insights into sepal and petal dimensions.
 
-### Dataset Used
-**Iris Dataset:** A classic dataset containing 150 samples of iris flowers, with 4 features (sepal length, sepal width, petal length, petal width) and 1 target variable (species).
+Visualization: Created Scatter plots and Pair plots to visualize species clusters.
 
-### Models Applied
-* **Data Manipulation:** Pandas
-* **Data Visualization:** Seaborn and Matplotlib
-* **Statistical Analysis:** Descriptive Statistics (`.describe()`)
+Key Insights
+Species Separation: Petal length and width are the most significant features for classification.
 
-### Key Results and Findings
-* **Species Separation:** The scatter plot showed that the *Setosa* species is easily distinguishable from *Versicolor* and *Virginica* based on petal length and width.
-* **Distributions:** Most features follow a relatively normal distribution, though petal measurements show a clear "gap" between species groups.
-* **Outliers:** Box plots revealed a few minor outliers in the `sepal_width` for the *Virginica* species, but the data is generally clean.
+Cluster Discovery: The Setosa species forms a completely distinct cluster, while Versicolor and Virginica have slight overlaps.
 
-* Task 3: Heart Disease Prediction (Description)
-Objective: To develop a machine learning pipeline that predicts the likelihood of heart disease in patients based on 14 clinical health markers. This task focused on handling medical data, where minimizing "False Negatives" (missing a sick patient) is a top priority.
+Task 3: Heart Disease Prediction (Classification)
+Problem Statement
+Build a predictive model to determine if a patient is at risk for heart disease based on clinical parameters like cholesterol, heart rate, and chest pain type.
 
-Key Technical Steps: * Data Cleaning: Handled missing values using median/mode imputation to maintain dataset integrity.
+Technical Workflow
+Preprocessing: Handled missing values via median imputation and applied One-Hot Encoding to categorical features.
 
-Feature Engineering: Implemented One-Hot Encoding to convert categorical clinical data into a mathematical format, expanding the feature set to 22 variables.
+Feature Scaling: Used StandardScaler to normalize numeric data, ensuring the model treats all features equally.
 
-Feature Scaling: Used StandardScaler to ensure features like "Cholesterol" (high range) and "Sex" (binary) were on the same scale for the Logistic Regression model.
+Model Training: Implemented a Logistic Regression classifier for binary diagnosis.
 
-Modeling: Applied a Logistic Regression classifier to determine risk probability.
+Evaluation: Validated performance using a Confusion Matrix and ROC-AUC Curve.
 
-Evaluation & Performance: * Confusion Matrix: Used to visualize the model's accuracy in identifying true heart disease cases vs. healthy individuals.
+Key Insights
+Primary Risk Factors: Chest Pain Type (cp) and Maximum Heart Rate (thalach) were identified as the strongest predictors.
 
-ROC-AUC Curve: Achieved a high AUC score, demonstrating the model's effectiveness in distinguishing between classes.
-
-Feature Importance: Identified that Chest Pain Type (cp) and ST Depression (oldpeak) were the most influential factors in predicting heart disease risk.
+Model Performance: The model shows high diagnostic reliability with a strong AUC score, effectively minimizing False Negatives.est Pain Type (cp) and ST Depression (oldpeak) were the most influential factors in predicting heart disease risk.
